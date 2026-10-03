@@ -38,3 +38,24 @@ Test texts are not part of the training data.
 3. Upload `data/cer_test/` as a Kaggle dataset, then run all cells.
 
 ## Rebuild the dataset
+cd dataset-pipeline
+npm install
+
+place a Nastaliq font in this folder as font.ttf (fonts are not committed)
+add one .txt file per sample to texts/
+
+node render.js
+python pack.py
+
+
+`pack.py` writes `cer-test.zip` with Linux-style (forward slash) paths, which Kaggle and
+Colab require. A zip made with Windows tools can contain backslash paths that break there.
+
+## Limitations
+
+- The OCR model has not been trained on the full 16k+ images. Only about 1200 steps have run so far because of limited GPU hardware, so accuracy may vary.
+- The CPT adapter is a small trial run and not a usable Khowar language model yet. It is a proof of concept for the pipeline. You can run inference on it with the provided notebook on a free Kaggle or Colab GPU, and `06_inference_qlora_v1.ipynb` also reports the perplexity score. Use your own raw Khowar text for the test, or the hardcoded sample text in the notebook.
+
+## Author
+
+Zahid, NeuraFlix
