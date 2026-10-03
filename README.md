@@ -9,7 +9,7 @@ continued-pretraining (CPT) experiment on that text.
 
 | Model | Description | Link |
 |-------|-------------|------|
-| khowar-ocr-v0.1 | DeepSeek-OCR-2 fine-tuned with QLoRA (Unsloth) on ~16k synthetic Nastaliq images | https://huggingface.co/zahidazam714/khowar-ocr-v0.1 |
+| khowar-ocr-v0.1 | DeepSeek-OCR-2 fine-tuned with QLoRA  on ~16k synthetic Nastaliq images | https://huggingface.co/zahidazam714/khowar-ocr-v0.1 |
 | qwen-khowar-qlora-v2 | Qwen2.5-0.5B QLoRA CPT trial on ~1.27M Khowar tokens (proof of concept) | https://huggingface.co/zahidazam714/qwen-khowar-qlora-v2 |
 
 ## Results
